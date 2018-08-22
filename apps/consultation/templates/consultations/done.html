@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Blog - Free Bulma template</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
+		<script defer="" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<!-- Bulma Version 0.7.1-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"/>
+		<link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'consultation/css/master.css'%}">
+		<link rel="stylesheet" type="text/css" href="{% static 'referrals/css/style.css'%}">
+		<link rel="stylesheet" type="text/css" href="{% static 'profiles/css/style.css'%}">
+	</head>
+
+	<body>
+		<nav class="navbar is-small">
+			<div class="column is-2">
+				<a class="navbar-item button is-2 is-primary is-outlined is-rounded" href="/home">
+					<span class="icon is-2">
+						<i class="fa fa-home fa-fw"></i>
+					</span>
+				</a>
+			</div>
+			<div class="column is-2">
+				<a class="navbar-item button is-2 is-danger is-outlined is-rounded" href="{% url 'home:logout'%}">
+					<span class="icon is-2">
+						<i class="fa fa-power-off fa-fw"></i>
+					</span>
+				</a>
+			</div>
+		</nav>
+		<div class="container">
+			<section class="has-text-centered">
+				<section class="hero is-primary is-bold">
+					<div class="hero-body">
+						<div class="container">
+							<h1 class="title">
+								Hello,
+								{{user.first_name|capfirst}}
+							</h1>
+							<h2 class="subtitle">
+								I hope you are having a great day!
+							</h2>
+						</div>
+					</div>
+				</section>
+				<hr>
+				<section class="info-tiles">
+					<div class="tile is-ancestor has-text-centered">
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<h1>Recommendation</h1>
+								<hr>
+								<a href="" class="button is-primary is-outlined is-reounded">See more</a>
+							</article>
+						</div>
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<h1>Recent Visit</h1>
+								<hr>
+								<a href="" class="button is-primary is-outlined is-reounded">See more</a>
+							</article>
+						</div>
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<h1>Your Medical history</h1>
+								<hr>
+								<a href="" class="button is-primary is-outlined is-reounded">See more</a>
+							</article>
+						</div>
+					</div>
+				</section>
+				<div class="columns">
+					<div class="column is-6">
+						<div class="card events-card">
+							<header class="card-header">
+								<p class="card-header-title">
+									Your Reult
+								</p>
+								<hr>
+							</header>
+							<div class="card-table">
+								<div class="content">
+									<table class="table is-fullwidth is-striped">
+										<tbody>
+											<tr>
+												<td width="5%">
+													<i class="fa fa-bell"></i>
+												</td>
+												<td>12/12/2018</td>
+												<td>
+													<a class="button is-small is-primary" href="#">Action</a>
+												</td>
+											</tr>
+											<tr>
+												<td width="5%">
+													<i class="fa fa-bell"></i>
+												</td>
+												<td>12/12/2018</td>
+												<td>
+													<a class="button is-small is-primary" href="#">Action</a>
+												</td>
+											</tr>
+											<tr>
+												<td width="5%">
+													<i class="fa fa-bell"></i>
+												</td>
+												<td>12/12/2018</td>
+												<td>
+													<a class="button is-small is-primary" href="#">Action</a>
+												</td>
+											</tr>
+											<tr>
+												<td width="5%">
+													<i class="fa fa-bell"></i>
+												</td>
+												<td>12/12/2018</td>
+												<td>
+													<a class="button is-small is-primary" href="#">Action</a>
+												</td>
+											</tr>
+											<tr>
+												<td width="5%">
+													<i class="fa fa-bell"></i>
+												</td>
+												<td>12/12/2018</td>
+												<td>
+													<a class="button is-small is-primary" href="#">Action</a>
+												</td>
+											</tr>
+											<tr>
+												<td width="5%">
+													<i class="fa fa-bell"></i>
+												</td>
+												<td>12/12/2018</td>
+												<td>
+													<a class="button is-small is-primary" href="#">Action</a>
+												</td>
+											</tr>
+											<tr>
+												<td width="5%">
+													<i class="fa fa-bell"></i>
+												</td>
+												<td>12/12/2018</td>
+												<td>
+													<a class="button is-small is-primary" href="#">Action</a>
+												</td>
+											</tr>
+											<tr>
+												<td width="5%">
+													<i class="fa fa-bell"></i>
+												</td>
+												<td>12/12/2018</td>
+												<td>
+													<a class="button is-small is-primary" href="#">Action</a>
+												</td>
+											</tr>
+											<tr>
+												<td width="5%">
+													<i class="fa fa-bell"></i>
+												</td>
+												<td>12/12/2018</td>
+												<td>
+													<a class="button is-small is-primary" href="#">Action</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column is-6">
+						<div class="card">
+							<header class="card-header">
+								<p class="card-header-title">
+									Search Result
+								</p>
+								<a href="#" class="card-header-icon" aria-label="more options">
+									<span class="icon">
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</span>
+								</a>
+							</header>
+							<div class="card-content">
+								<div class="content">
+									<div class="control has-icons-left has-icons-right">
+										<input class="input is-large" type="text" placeholder="">
+										<span class="icon is-medium is-left">
+											<i class="fa fa-search"></i>
+										</span>
+										<span class="icon is-medium is-right">
+											<i class="fa fa-check"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<footer>
+	<section class="section">
+		<div class="container">
+			<div class="columns is-multiline">
+				<div class="column is-one-third">
+					<article class="notification media has-background-white">
+						<figure class="media-left">
+							<span class="icon">
+								<i class="has-text-warning fa fa-utensils fa-lg"></i>
+							</span>
+						</figure>
+						<div class="media-content">
+							<div class="content">
+								<h1 class="title is-size-4">Food</h1>
+								<p class="is-size-5 subtitle">
+									The power of
+									<strong>Flexbox</strong>
+									in a simple interface
+								</p>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="column is-one-third">
+					<article class="notification has-background-white media">
+						<figure class="media-left">
+							<span class="icon has-text-info">
+								<i class="fa fa-lg fa-bed"></i>
+							</span>
+						</figure>
+						<div class="media-content">
+							<div class="content">
+								<h1 class="title is-size-4">Sleep</h1>
+								<p class="is-size-5 subtitle">
+									The indispensable
+									<strong>form controls</strong>, designed for maximum clarity
+								</p>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="column is-one-third">
+					<article class="notification has-background-white media">
+						<figure class="media-left">
+							<span class="icon has-text-danger">
+								<i class="fa fa-lg fa-bicycle"></i>
+							</span>
+						</figure>
+						<div class="media-content">
+							<div class="content">
+								<h1 class="title is-size-4">Excersise</h1>
+								<p class="is-size-5 subtitle">
+									Advanced multi-part components with lots of possibilities
+								</p>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="column is-one-third">
+					<article class="notification has-background-white media">
+						<figure class="media-left">
+							<span class="icon has-text-grey">
+								<i class="has-text-success fa fa-lg fa-smile"></i>
+							</span>
+						</figure>
+						<div class="media-content">
+							<div class="content">
+								<h1 class="title is-size-4">Destress</h1>
+								<p class="is-size-5 subtitle">
+									An
+									<strong>easy-to-read</strong>
+									naming system designed for humans
+								</p>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="column is-one-third">
+					<article class="notification has-background-white media">
+						<figure class="media-left">
+							<span class="icon has-text-primary">
+								<i class="fa fa-lg fa-tint"></i>
+							</span>
+						</figure>
+						<div class="media-content">
+							<div class="content">
+								<h1 class="title is-size-4">Hydration</h1>
+								<p class="is-size-5 subtitle">
+									Design the
+									<strong>structure</strong>
+									of your webpage with these CSS classes
+								</p>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="column is-one-third">
+					<article class="notification has-background-white media">
+						<figure class="media-left">
+							<span class="icon has-text-danger">
+								<i class="fa fa-lg fa-cube"></i>
+							</span>
+						</figure>
+						<div class="media-content">
+							<div class="content">
+								<h1 class="title is-size-4">Elements</h1>
+								<p class="is-size-5 subtitle">
+									Essential interface elements that only require a
+									<strong>single CSS class</strong>
+								</p>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+</footer>
+</div>
+<script async="async" type="text/javascript" src="{% static 'consultation/js/bulma.js'%}"></script>
+</body>
+
+</html>

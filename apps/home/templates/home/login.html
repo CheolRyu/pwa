@@ -1,0 +1,79 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.7.1-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/register.css'%}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="hero is-primary is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-4 is-offset-4"> {% if messages %}
+                    <article class="message is-danger">
+                      <div class="message-header">
+                          <p>Incorrect fields</p>
+                      </div>
+                      <div class="message-body">
+                          {% for message in messages %}
+                              <li>{{ message }}</li>
+                          {% endfor %}
+                      </div>
+                    </article>{% endif %}
+                    <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">Login</h1>
+                    <hr class="line">
+                    <div class="box">
+                        <form class="form-group" action="{% url 'home:login_process' %}" method="POST">
+                            {% csrf_token %}
+                            <br>
+                            <br>
+                            <div class="field">
+                                <p class="control has-icons-left has-icons-right">
+                                    <input class="is-rounded input is-large" type="email" name='email' placeholder="Email">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                    <span class="icon is-small is-right">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <p class="control has-icons-left">
+                                    <input class="input is-large is-rounded" name='password' type="password" placeholder="Password">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <label class="checkbox">
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div>
+                            <button type="submit" class="button is-primary is-outlined is-rounded is-large">Login</button>
+                        </form>
+                    </div>
+                    <p class="subtitle">
+                        <a href="{% url 'home:sign_up'%}">Sign Up</a> &nbsp;·&nbsp;
+                        <a href="../">Forgot Password</a> &nbsp;·&nbsp;
+                        <a href="../">Need Help?</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script async type="text/javascript" src="{% static 'home/js/main.js'%}"></script>
+</body>
+
+</html>

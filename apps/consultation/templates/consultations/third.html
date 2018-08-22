@@ -1,0 +1,125 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog - Free Bulma template</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
+    <script defer="" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bulma Version 0.7.1-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'consultation/css/master.css'%}">
+</head>
+
+<body>
+    <section class="section is-primary is-medium">
+        <div class="container has-text-centered">
+            <a class="button is-white is-outlined is-rounded" href="/">
+                <span>Back Home</span>
+            </a>
+        </div>
+        <hr>
+        <br>
+        <div class="container">
+            <div class="container has-text-centered">
+                <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">Welcome to Consultations</h1>
+                <p class="subtitle is-spaced is-size-3-desktop is-size-4-mobile">From a scale of 0 to 5 with 0 being no symptom to 5 being severe and 1 being mild.</p>
+            </div>
+        </div>
+    </section>
+    <section class="section call-to-action is-small is-primary has-text-centered">
+        <div class="hero-body">
+            {% if third %}
+            <div class="box">
+                <div class="columns level">
+                    <div class="column level-item">
+                        <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">{{third.question}}</h1>
+                    </div>
+                    <form action="{% url 'consultation:third_process' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="column item-level">
+                        <div class="select is-primary is-rounded is-medium has-text-centered">
+                            <select name="choice" class="categories">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column item-level">
+                        <input type="submit" class="button is-primary is-rounded is-medium" value="Next Question">
+                    </div>
+                    </form>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+    <footer class="section is-primary is-small has-text-centered">
+        <div class="container is-narrow">
+            <div class="social-icons">
+                <span class="icon is-large">
+                    <img src="{% static 'consultation/img/myAvatar.png'%}" class="avatar" alt="Consultations">
+                </span>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-one-third">
+                    <h1 class="title is-size-4-touch">Living, learning, &amp; leveling up one day at a time.</h1>
+                </div>
+            </div>
+            {% comment %}
+            <div class="social-icons">
+                <p class="field">
+                    <a class="button is-medium" href="https://twitter.com/farleymatters" target="_blank">
+                        <span class="icon is-small">
+                            <i class="fab fa-twitter fa-fw"></i>
+                        </span>
+                    </a>
+                    <a class="button is-medium" href="https://dribbble.com/mattfarley" target="_blank">
+                        <span class="icon is-small">
+                            <i class="fab fa-dribbble fa-fw"></i>
+                        </span>
+                    </a>
+                    <a class="button is-medium" href="https://www.linkedin.com/in/matthew-farley-32526014/" target="_blank">
+                        <span class="icon is-small">
+                            <i class="fab fa-linkedin-in fa-fw"></i>
+                        </span>
+                    </a>
+                    <a class="button is-medium" href="https://angel.co/mattfarley" target="_blank">
+                        <span class="icon is-small">
+                            <i class="fab fa-angellist fa-fw"></i>
+                        </span>
+                    </a>
+                    <a class="button is-medium" href="https://www.producthunt.com/@farleymatters" target="_blank">
+                        <span class="icon is-small">
+                            <i class="fab fa-product-hunt fa-fw"></i>
+                        </span>
+                    </a>
+                    <a class="button is-medium" href="/cdn-cgi/l/email-protection#137e7267675363767d777672657c613d707c7e" target="_blank">
+                        <span class="icon is-small">
+                            <i class="far fa-envelope fa-fw"></i>
+                        </span>
+                    </a>
+                </p>
+            </div> {% endcomment %} {% comment %}
+            <div class="copyright">Handcrafted by me
+                <span class="icon has-white-text" style="vertical-align:middle;">
+                    <i class="far fa-copyright"></i>
+                </span>twentyeighteen</div>
+            <div class="made-by-bulma">
+                <a href="https://bulma.io">
+                    <img src="https://bulma.io/images/made-with-bulma--white.png" alt="Made with Bulma" width="163" height="31">
+                </a>
+            </div> {% endcomment %}
+        </div>
+    </footer>
+    <script async type="text/javascript" src="{% static 'consultation/js/bulma.js'%}"></script>
+</body>
+
+</html>

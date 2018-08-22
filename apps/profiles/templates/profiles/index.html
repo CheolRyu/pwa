@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	{% load static %}
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Admin - Free Bulma template</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<!-- Bulma Version 0.7.1-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'profiles/css/style.css'%}">
+		<link rel="stylesheet" type="text/css" href="{% static 'home/css/master.css'%}">
+		<link rel="stylesheet" type="text/css" href="{% static 'profiles/css/tabs.css'%}">
+		<link rel="stylesheet" type="text/css" href="{% static 'profiles/css/payment.css'%}">
+		<!-- <link rel="stylesheet" type="text/css" href="{% static 'home/css/background.css'%}"> -->
+		<script defer="" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	</head>
+
+	<body>
+
+		<!-- START NAV -->
+		<nav class="navbar is-small">
+			<div class="column is-2">
+				<a class="navbar-item button is-2 is-primary is-outlined is-rounded" href="/home">
+					<span class="icon is-2">
+						<i class="fa fa-home fa-fw"></i>
+					</span>
+				</a>
+			</div>
+			<div class="column is-2">
+				<a class="navbar-item button is-2 is-danger is-outlined is-rounded" href="{% url 'home:logout'%}">
+					<span class="icon is-2">
+						<i class="fa fa-power-off fa-fw"></i>
+					</span>
+				</a>
+			</div>
+		</nav>
+		<!-- END NAV -->
+		<!-- START HEADER -->
+		<section class="hero is-primary is-bold">
+			<div class="hero-body">
+				<div class="container has-text-centered">
+					<h1 class="title">
+						Hello,
+						{{ user.first_name|capfirst }}
+					</h1>
+					<h1 class="subtitle">
+						I hope you are having a great day!
+					</h1>
+				</div>
+			</div>
+		</section>
+		<!-- END HEADER -->
+
+		<!-- START TAB -->
+		<section class="hero is-primary is-bold">
+			<div class="tabs is-boxed is-centered main-menu" id="nav">
+				<ul>
+					<li data-target="pane-2" id="2" class="is-active">
+						<a>
+							<span class="icon is-small">
+								<i class="fa fa-cog"></i>
+							</span>
+							<span>General</span>
+						</a>
+					</li>
+					<li data-target="pane-3" id="3">
+						<a>
+							<span class="icon is-small">
+								<i class="fa fa-credit-card"></i>
+							</span>
+							<span>Payment</span>
+						</a>
+					</li>
+					<li data-target="pane-4" id="4">
+						<a>
+							<span class="icon is-small">
+								<i class="fa fa-bell"></i>
+							</span>
+							<span>Reminder</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tab-content">
+				<div class="tab-pane" id="pane-3">
+					<div class="columns">
+						<div class="container">
+							<div class="container">
+								<div class="parent">
+									<div class="son">
+										<div class="container">
+											<div class="left">
+												<div class="img"></div>
+												<div class="info">
+													<ul>
+														<li>You are about to</li>
+														<li>purchase</li>
+														<li>90 days of consultations</li>
+														<li>$200</li>
+													</ul>
+													<ul>
+														<li>
+															<p>Time left</p>
+														</li>
+														<li>90 days</li>
+														<li>Next Payment</li>
+														<li>90 days later</li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="up">
+													<ul>
+														<li>
+															<h3>It's almost done!</h3>
+														</li>
+														<li>Fill in the fields below and click "Enroll now!" to become member.</li>
+													</ul>
+													<ul>
+														<li class="activecr">credit card</li>
+														<li>paypal</li>
+													</ul>
+												</div>
+												<div class="down">
+													<div class="payment">
+														<form>
+															<div class="form-group column">
+																<label class="cardNumber">Card Number</label>
+																<input class="input is-primary is-rounded" type="text" placeholder="4556 1234 4568 7890">
+															</div>
+
+															<div class="form-group1 column" id="expiration-date">
+																<div class="lab">
+																	<label>Expiration Date</label>
+																	<select class="select">
+																		<option value="01">January</option>
+																		<option value="02">February
+																		</option>
+																		<option value="03">March</option>
+																		<option value="04">April</option>
+																		<option value="05">May</option>
+																		<option value="06">June</option>
+																		<option value="07">July</option>
+																		<option value="08">August</option>
+																		<option value="09">September</option>
+																		<option value="10">October</option>
+																		<option value="11">November</option>
+																		<option value="12">December</option>
+																	</select>
+																	<select class="year">
+																		<option value="16">
+																			2016</option>
+																		<option value="17">
+																			2017</option>
+																		<option value="18">
+																			2018</option>
+																		<option value="19">
+																			2019</option>
+																		<option value="20">
+																			2020</option>
+																		<option value="21">
+																			2021</option>
+																	</select>
+																</div>
+
+																<div class="form-group CVV">
+																	<label for="cvv">CVV</label>
+																	<input type="text" id="cvv">
+																</div>
+															</div>
+															<div class="form-group btn" id="pay-now">
+																<button type="submit" class="btn btn-default" id="confirm-purchase">Eroll me</button>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="pane-4">
+					<div class="tile is-ancestor has-text-centered">
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<h1>Calender</h1>
+								<hr>
+								<p>90 days remaing until next appintment</p>
+								<br><br>
+								<a class="button is-rounded is-2 is-outlined is-primary" href="#">Visit</a>
+							</article>
+						</div>
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<h1>Reminder</h1>
+								<hr>
+								<p>Take 2 tablets of stress release everyday.</p>
+								<br><br>
+								<a class="button is-rounded is-2 is-outlined is-primary" href="#">Visit</a>
+							</article>
+						</div>
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<h1>Conultation record</h1>
+								<hr>
+								<p>90 days remaing until next appintment</p>
+								<br><br>
+								<a class="button is-rounded is-2 is-outlined is-primary" href="#">Visit</a>
+							</article>
+						</div>
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<h1>Referrals</h1>
+								<hr>
+								<p>90 days remaing until next appintment</p>
+								<br><br>
+								<a class="button is-rounded is-2 is-outlined is-primary" href="#">Visit</a>
+							</article>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane is-active" id="pane-2">
+					<div class="content">
+						<h1>Update your information</h1>
+						<form action="#" method="post">
+							<div class="field">
+								<label class="label">First Name</label>
+								<div class="control has-icons-left has-icons-right">
+									<input class="input is-primary is-rounded" type="text" value="">
+									<span class="icon is-small is-left">
+										<i class="fas fa-user"></i>
+									</span>
+								</div>
+							</div>
+							<div class="field">
+								<label class="label">Last Name</label>
+								<div class="control has-icons-left has-icons-right">
+									<input class="input is-primary is-rounded" type="text" value="">
+									<span class="icon is-small is-left">
+										<i class="fas fa-user"></i>
+									</span>
+									<span class="icon is-small is-right">
+										<i class="fas fa-check"></i>
+									</span>
+								</div>
+							</div>
+							<div class="field">
+								<label class="label">Email</label>
+								<div class="control has-icons-left has-icons-right">
+									<input class="input is-primary is-rounded" type="email" value="">
+									<span class="icon is-small
+									is-left">
+										<i class="fas fa-envelope"></i>
+									</span>
+									<span class="icon is-small is-right">
+										<i class="fas fa-check"></i>
+									</span>
+								</div>
+							</div>
+							<div class="field">
+								<label class="label">Change Password</label>
+								<div class="control has-icons-left
+									has-icons-right">
+									<input class="input is-primary is-rounded" type="password" value="">
+									<span class="icon is-small is-left">
+										<i class="fas fa-lock"></i>
+									</span>
+									<span class="icon is-small is-right">
+										<i class="fas fa-check"></i>
+									</span>
+								</div>
+							</div>
+							<div class="field is-grouped">
+								<div class="control">
+									<button type="submit" class="button is-primary is-rounded is-outlined">Save</button>
+								</div>
+								<div class="control">
+									<button type="submit" class="button is-danger is-rounded
+									is-outlined">Cancel</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END TAB -->
+		<script type="text/javascript" src="{% static 'profiles/js/tabs.js'%}"></script>
+	</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Blog - Free Bulma template</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
+		<script defer="" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<!-- Bulma Version 0.7.1-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'home/css/master.css'%}">
+		<link rel="stylesheet" type="text/css" href="{% static 'home/css/background.css'%}">
+	</head>
+
+	<body>
+		<div class="hero-1">
+			<div data-collapse="none" data-animation="default" data-duration="400" class="navbar w-nav">
+				<div class="menu">
+					<div class="hero-header has-text-centered">
+						<nav role="navigation" class="w-nav-menu">
+							<a href="/home" class="nav nav-contact w-nav-link">
+								<h1>Home</h1>
+							</a>
+							<a href="/article" class="nav nav-contact w-nav-link">
+								<h1>Education</h1>
+							</a>
+							<a href="/profiles" class="nav nav-contact w-nav-link">
+								<h1>Profile</h1>
+							</a>
+							<a href="/referals" class="nav nav-contact w-nav-link">
+								<h1>Referrals</h1>
+							</a>
+							<a href="{% url 'home:logout'%}" class="nav nav-contact w-nav-link">
+								<h1>Logout</h1>
+							</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="section skills has-text-centered">
+			<div class="container is-narrow">
+				<div class="box">
+					<div class="content">
+						<div class="columns is-centered">
+							<div class="column">
+								<div class="social-icons">
+									<span class="icon is-large">
+										<img src="{% static 'consultation/img/consultation.jpg'%}" alt="Consultations">
+									</span>
+								</div>
+								<h1 class="title is-size-4 is-spaced">About</h1>
+								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro totam ad, quam quia soluta iusto maxime dolores praesentium sed cumque. Facilis assumenda quia, aliquam corrupti deserunt commodi quo modi eveniet. Lorem ipsum dolor sit amet
+									consectetur adipisicing elit. Perspiciatis, id incidunt repellendus dignissimos facere, consequatur numquam assumenda, quis molestias cumque magni tempore asperiores. Est dicta blanditiis veritatis nostrum, quod consectetur!Libero, ullam. Qui, labore
+									delectus. Ducimus, quia modi earum ipsam hic aliquid numquam tempora labore recusandae in facere consequuntur, eligendi alias quisquam architecto est nostrum! Est amet corporis quaerat dolores.</p>
+								<p class="list-title has-text-primary has-text-weight-normal">Things that you will get to know</p>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis ad voluptate doloremque, aspernatur vitae praesentium reiciendis eos a, impedit, et ducimus hic! Iste, dignissimos. Possimus facilis saepe quo distinctio accusamus? Lorem ipsum
+									dolor sit amet consectetur adipisicing elit. Officiis nesciunt nostrum culpa illo doloremque, reprehenderit nihil quisquam neque facilis distinctio possimus totam. Quod non, fuga natus eveniet soluta architecto? Dolor? Ab nulla enim ea nobis itaque
+									magni rem voluptatem, ipsam tempora! Eveniet eos at iusto, soluta aut nihil expedita dolorum praesentium dignissimos omnis non similique rem. Sed nemo rerum a? Eveniet excepturi qui labore ipsam magnam consequuntur tenetur, placeat cum sequi, et
+									quaerat unde non repellendus aperiam deleniti quod quae adipisci, in ut possimus atque doloribus voluptates. Fugiat, rem dignissimos.</p>
+								<div class="column level-item">
+									<a class="button is-primary is-outlined is-rounded is-medium" href="{% url 'consultation:index_process' %}">Let's go
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section call-to-action is-primary has-text-centered">
+			<div class="container is-narrow">
+				<div class="box">
+					<div class="columns level">
+						<div class="column level-item">
+							<h1 class="title">Become our memeber</h1>
+						</div>
+						<div class="column level-item">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora architecto vero nemo ut quos minus cupiditate dicta ex, quae accusamus doloremque quia, repellendus iure placeat dolore magnam animi debitis at.</p>
+						</div>
+						<div class="column level-item">
+							<a class="button is-primary is-outlined is-rounded is-medium" href="/profiles">Eroll me!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="section is-primary is-small has-text-centered">
+			<div class="container is-narrow">
+				<div class="logo">
+					<img src="img/mf-logo-white.svg" alt="" height="48">
+				</div>
+				<div class="columns is-centered">
+					<div class="column is-one-third">
+						<h1 class="title is-size-4-touch">Some insprational quote goes here.</h1>
+					</div>
+				</div>
+				<div class="social-icons">
+					<p class="field">
+						<a class="button is-medium" href="#" target="_blank">
+							<span class="icon is-small">
+								<i class="fab fa-twitter fa-fw"></i>
+							</span>
+						</a>
+						<a class="button is-medium" href="#" target="_blank">
+							<span class="icon is-small">
+								<i class="fab fa-facebook fa-fw"></i>
+							</span>
+						</a>
+						<a class="button is-medium" href="#" target="_blank">
+							<span class="icon is-small">
+								<i class="fab fa-linkedin-in fa-fw"></i>
+							</span>
+						</a>
+						<a class="button is-medium" href="#" target="_blank">
+							<span class="icon is-small">
+								<i class="fab fa-instagram fa-fw"></i>
+							</span>
+						</a>
+						<a class="button is-medium" href="mailto:Charlesworld1994@gmail.com" target="_blank">
+							<span class="icon is-small">
+								<i class="far fa-envelope fa-fw"></i>
+							</span>
+						</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+
+</html>
